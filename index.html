@@ -10,6 +10,17 @@
   analytics.page();
   }}();
 </script>
+    <script>
+        var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: 'M7lc1UVf-VE'
+    });
+    var ytAnalytics = new window.analyticsPlugins.YT(player, 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX0365')
+    ytAnalytics.initialize()
+}</script>
 </head> 
 <body> 
 <h1>What is your favorite place to travel?</h1> 
@@ -53,5 +64,8 @@
         });
       }
     </script>
+    
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DyDfgMOUjCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body> 
 </html>
