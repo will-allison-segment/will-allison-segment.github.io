@@ -58,13 +58,22 @@
     
     
    <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/DyDfgMOUjCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <script>
+    <div id="player2"></div>    
+    
+    <script>
         var player;
+        var player2;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player');
-    
-var ytAnalytics = new window.analyticsPlugins.YT(player, "AIzaSyDsR7SI92vvf2nR6AE4EyFKyQmleXSOPBc")
-      ytAnalytics.initialize()
+    player2 = new YT.Player('player2', {
+    height: '390',
+    width: '640',
+    videoId: 'DyDfgMOUjCI'
+    });
+    var ytAnalytics = new window.analyticsPlugins.YoutubeAnalytics(player2);
+    ytAnalytics.initialize();
+var ytAnalytics = new window.analyticsPlugins.YT(player, "AIzaSyDsR7SI92vvf2nR6AE4EyFKyQmleXSOPBc");
+      ytAnalytics.initialize();
 }</script>
 
 </body> 
