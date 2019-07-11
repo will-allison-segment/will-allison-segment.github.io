@@ -10,7 +10,7 @@
   analytics.page();
   }}();
 </script>
-
+<script src="https://www.youtube.com/iframe_api"></script>
 </head> 
 <body> 
 <h1>What is your favorite place to travel?</h1> 
@@ -58,12 +58,6 @@
     
    <div id="player"></div>
         <script>
-                  // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
