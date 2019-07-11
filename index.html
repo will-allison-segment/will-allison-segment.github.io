@@ -57,15 +57,11 @@
     </script>
     
     
-   <div id="player"></div>
+   <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/DyDfgMOUjCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <script>
         var player;
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-    height: '390',
-    width: '640',
-    videoId: 'DyDfgMOUjCI'
-    });
+    player = new YT.Player('player');
     
 var ytAnalytics = new window.analyticsPlugins.YT(player, "AIzaSyDsR7SI92vvf2nR6AE4EyFKyQmleXSOPBc")
       ytAnalytics.initialize()
